@@ -8,8 +8,6 @@ jobs:
   build:
    runs-on: ubuntu-latest
    steps:
-            - name: Lint Action
-              uses: samuelmeuli/lint-action@v1.4.0
             - uses: actions/checkout@v1
             - name: Login to DockerHub Registry
               run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
