@@ -2,13 +2,12 @@
 name: Docker Image CI
 
 on:
-release:
-types: [published]
-
+ release:
+  types: [published]
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
+  build:
+   runs-on: ubuntu-latest
+   steps:
             - name: Lint Action
               uses: samuelmeuli/lint-action@v1.4.0
             - uses: actions/checkout@v1
