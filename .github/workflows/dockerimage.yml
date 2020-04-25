@@ -22,3 +22,15 @@ jobs:
               run: docker build . --file Dockerfile --tag dockercase/angular-cli:latest
             - name: Push the latest Docker image
               run: docker push dockercase/angular-cli:latest
+              
+              # Copy file via ssh key
+              
+   #         - name: copy file via ssh key
+   #           uses: ./
+   #           with:
+   #            host: ${{ secrets.HOST }}
+   #            username: ${{ secrets.USERNAME }}
+   #            key: ${{ secrets.KEY }}
+   #            port: ${{ secrets.PORT }}
+   #            source: "tests/a.txt,tests/b.txt"
+   #            target: "test"
